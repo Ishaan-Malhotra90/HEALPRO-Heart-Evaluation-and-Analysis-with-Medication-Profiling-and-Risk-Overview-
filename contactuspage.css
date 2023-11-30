@@ -1,0 +1,164 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+ width: 100vw;
+ height: 100vh;
+ overflow: hidden;
+ background: linear-gradient(to right, #5fd4ff, #feb47b);
+ background-size: 200% 100%;
+ animation: gradientAnimation 9s linear infinite;
+}
+
+@keyframes gradientAnimation {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+nav {
+    justify-content: space-between;
+    position: fixed;
+    top: 2vh;
+    left: 5vw; 
+    width: 90vw;
+    border-radius: 10px;
+    z-index: 999;
+    background: rgba(32, 32, 32, 0.8);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    height: 8vh;
+    margin: 0;
+  }
+  
+  nav li {
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+  
+  nav a {
+    position: relative;
+    top: 0vh;
+    font-size: 3vmin;
+    text-decoration: none;
+    color: white;
+    transition: color 0.6s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+  }
+  .projectlogo
+  {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 10vmin;
+  }
+.slide5 {
+    position: absolute;
+    top: 15vh;
+    width: 100vw;
+  }
+  
+  .slide-content5
+  {
+    position: relative;
+    top: 0vh;
+    left: 5vw;
+    width: 90vw;
+    height: 80vh;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+  }
+  
+  .contactinfo {
+    width: 50vw; 
+    background-color: transparent;
+    position: relative;
+    top: -2vh;
+    left: 7vw;
+    overflow: hidden;
+    z-index: 99;
+  }
+  .contactinfo  h2
+  {
+    position: relative;
+    top: 0vh;
+    left: 0vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8vmin;
+    color: black;
+  }
+  .contactinfo .arrowright
+  {
+    width: 5vmin;
+  }
+  .contactinfo .contactdetails
+  {
+    position: relative;
+    top: -5vh;
+    left: 0vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vmin;
+    color: black;
+  }
+  
+  #contactForm {
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    padding: 4vh;
+    border-radius: 10px;
+    width: 40vw; 
+    z-index: 9999;
+  }
+  
+  #contactForm input[type="text"],
+  #contactForm input[type="email"],
+  #contactForm textarea {
+    width: 100%;
+    padding: 4vh;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 9999;
+  }
+  
+  #contactForm .buttonsubmit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 3vmin;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  #contactForm .buttonsubmit:hover {
+    background-color: gray;
+    color: white;
+  }
