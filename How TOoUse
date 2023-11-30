@@ -1,0 +1,7 @@
+## 1. Open vs code in terminal write python -m venv venv
+### If this dosen't write in terminal set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    then Get-ExecutionPolicy if it prints rmotesigned then run the python -m venv venv again
+#2. After running the command first run venv/scripts/activate.
+#3. Install all the libraries in the requirements.txt file in the virtual enviornment you created above.
+#4. Now just run the flaskapp.py and ctrl+click on http://127.0.0.1:5000.
+#5. After doing all these steps homepage will appear on your default website and as u are a new user u have to first signup in the joinus section and your data will be saved there.
