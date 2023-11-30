@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css')}}">
+</head>
+<body>
+  <div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+ </div>
+  <nav>
+  
+    <ul>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('loginpage') }}">Join Us</a></li>
+        <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+    
+      </ul>
+    
+      <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+  
+  </nav>
+    
+    
+    
+    <section class="slide2">
+           
+      <div class="slide-content2">
+          
+          <section class="slide2section">
+          
+              <div class="textcontainer">
+          
+                  <div class="pContent">
+          
+                      <h1>HEALPRO: (Heart Evaluation and Analysis with Medication Profiling and Risk Overview)</h1>
+          
+                      <p>
+                        HEALPRO is a versatile health evaluation and analysis tool focused on heart disease risk prediction and comprehensive medication profiling. It offers valuable insights into heart health and medication information, promoting informed decision-making for healthier lives.</p>
+          
+                  </div>
+          
+              </div>
+              
+              <img class="pImage" src="static//images//heartimage1.png" alt="GIF Animation">
+            </section>
+            </div>
+            </section>
+
+  </body>
+</html>

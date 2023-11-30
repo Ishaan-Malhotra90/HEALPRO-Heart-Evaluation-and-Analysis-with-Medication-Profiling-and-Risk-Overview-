@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='page1.css')}}">
+    <title>Main Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Intercept the form submission
+            $("form[name='mainForm']").submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Get the form data
+                var formData = $(this).serialize();
+
+                // Send an AJAX request to the server
+                $.ajax({
+                    type: "POST",
+                    url: "{{ url_for('predict') }}",  // Set the correct URL for your Flask route
+                    data: formData,
+                    success: function (response) {
+                        // Update the result div with the response from the server
+                        $("#result").html(response.result);  // Assuming the server returns a JSON object with a 'result' field
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+     <nav>
+         <ul>
+           
+            <li><a href="{{ url_for('mainpage') }}">Discover</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+        
+          </ul>
+        
+          <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+      
+      </nav> 
+  
+    <div id="form">
+        <h1>Provide your details</h1>
+        <form id="prediction-form" name="mainForm" action="{{ url_for('predict') }}" method="POST">
+            <div class="form-group">
+                <input type="text" id="glucose" name="glucose" placeholder="Glucose (0-300)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="bmi" name="bmi" placeholder="BMI (0-45)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="systolic" name="systolic" placeholder="Systolic BP (0-200)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="diastolic" name="diastolic" placeholder="Diastolic BP (0-200)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="cholesterol" name="cholesterol" placeholder="Total Cholesterol (0-400)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="cigsPerDay" name="cigsPerDay" placeholder="Cigarettes per Day (0-50)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="age" name="age" placeholder="Age (0-100)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="bpMeds" name="bpMeds" placeholder="Bpmeds 0 (No) 1(Yes)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="prevalentStroke" name="prevalentStroke" placeholder="prevalentStroke 0 (No) 1(Yes)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="prevalentHyp" name="prevalentHyp" placeholder="prevalentHyp 0 (No) 1(Yes)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="diabetes" name="diabetes" placeholder="diabetes 0 (No) 1(Yes)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="gender" name="gender" placeholder="gender 0 (female) 1(male)" required>
+            </div>
+            <button type="submit" class="btn" name="submit">Predict</button>
+        </form>
+        
+    </div>
+
+    <div id="result" class="result">
+        According to dataset<br>
+        Normal range of significant factors are as follows:-<br><br>
+        Cigs Per Day should be in the range of 0 to 10.<br>
+        Cholesterol levels should be in the range of 100 to 200.<br>
+        Systolic Bp should be in the range of 100 to 150.<br>
+        Diabstolic BP should be in the range of 60-100.<br> 
+        Bmi should be in the range of 25 to 30.<br>
+        Glucose levels should be in the range of 0 to 100.<br><br>
+        Note:- The likelihood of heart disease still can be affected by other factors these are just some factors out of them.<br><br>
+
+        The model used to predict is saved at accuracy of 93.53%
+
+    </div>
+</body>
+
+</html>

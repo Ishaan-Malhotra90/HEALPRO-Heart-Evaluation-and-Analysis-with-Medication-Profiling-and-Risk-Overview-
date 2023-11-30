@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainpage.css')}}">
+</head>
+<body>
+    <nav>
+  
+        <ul>
+           
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('loginpage') }}">Join Us</a></li>
+            <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+        
+          </ul>
+        
+          <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+      
+      </nav>
+  <section class="fixed-background img-1">
+    <div class="content">
+        <h2>Predict your chances of having Heart Disease</h2>
+        <p>Empower yourself with our cutting-edge heart disease prediction tool; simply input relevant health metrics for a personalized risk assessment, guiding you towards proactive measures for a heart-healthy lifestyle.</p>
+        <a href="{{ url_for('page1') }}" class="explore-button">Explore</a>
+
+    </div>
+</section>
+
+<section class="fixed-background img-2">
+    <div class="content">
+        <h2>Analysis of dataset used to train prediction model</h2>
+        <p>Heart disease results from a dynamic interplay of lifestyle choices like diet and exercise, intertwined with genetic factors, age, and existing health conditions—highlighting the need for a holistic approach to cardiovascular well-being.</p>
+        <a href="{{ url_for('page2') }}" class="explore-button">Explore:</a>
+    </div>
+</section>
+
+<section class="fixed-background img-3">
+    <div class="content">
+        <h2>MediSearch</h2>
+        <p>Effortlessly find the right medicine by utilizing our user-friendly search tool, tailoring results to your specific health needs and ensuring accurate and informed choices.</p>
+        <a href="{{ url_for('page3') }}"  class="explore-button">Explore:</a>
+    </div>
+</section>
+
+<section class="fixed-background img-4">
+    <div class="content">
+        <h2>Analysis of medicine dataset</h2>
+        <p>Uncover insights in our medicine dataset analysis, revealing trends like side effects, habit-forming potential, and prescription frequency—empowering informed decisions for optimal healthcare choices.</p>
+        <a href="{{ url_for('page4') }}" class="explore-button">Explore:</a>
+    </div>
+</section>
+
+<section class="fixed-background img-5">
+    <div class="content">
+        <h2>Documentation</h2>
+        <p>Dive into our documentation, providing essential justification for our work by detailing articles on heart disease, datasets utilized, and a thorough analysis of key influencing factors—solidifying the credibility of our research and methodology.</p>
+        <a href="{{ url_for('page5') }}" class="explore-button">Explore:</a>
+    </div>
+</section>
+
+      
+      
+</body>
+</html>

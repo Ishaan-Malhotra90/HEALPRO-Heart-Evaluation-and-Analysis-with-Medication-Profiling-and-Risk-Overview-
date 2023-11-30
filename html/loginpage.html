@@ -1,0 +1,112 @@
+
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginpage.css')}}">
+    </head>
+    <body>
+        <nav>
+            <ul>
+               
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+            
+              </ul>
+            
+              <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+          
+          </nav>
+        <img src="static//images//signupimage.png" class="mainimage">
+    
+        <div id="form" class="form-container">
+    <h1>Login</h1>
+    <form name="form" action="{{ url_for('login') }}"  method="POST">
+        <div class="form-group">
+            <input type="text" id="user" name="user" required>
+            <label for="user"><img src="static//images//username.png">Username</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="pass" name="pass" required>
+            <label for="pass" ><img src="static//images//passwordimage.png">Password</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="patientID" name="patientID" required>
+            <label for="patientID"><img src="static//images//patient.png">Patient ID</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="mail" name="mail" required>
+            <label for="mail"><img src="static//images//email.png">Mail ID</label>
+        </div>
+        <button type="submit" class="btn" name="submit">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+              </svg>
+              Login
+        </button>
+        <p class="signup">Don't have an account?
+		<a rel="noopener noreferrer" href="#" class="loginLink">Sign Up</a>
+	</p>
+    </form>
+        </div>
+
+
+        <div id="signup" class="form-container">
+    <h1>Sign Up</h1>
+    <form name="form" action="{{ url_for('signup') }}"  method="POST">
+        <div class="form-group">
+            <input type="text" id="user" name="user" required>
+            <label for="user"><img src="static//images//username.png">Username</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="pass" name="pass" required>
+            <label for="pass" ><img src="static//images//passwordimage.png">Password</label>
+        </div>
+        <div class="form-group">
+            <input type="cpassword" id="cpass" name="cpass" required>
+            <label for="cpass" ><img src="static//images//passwordimage.png">Confirm Password</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="patientID" name="patientID" required>
+            <label for="patientID"><img src="static//images//patient.png">Patient ID</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="mail" name="mail" required>
+            <label for="mail"><img src="static//images//email.png">Mail ID</label>
+        </div>
+        <button type="submit" class="btn" name="submit">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+              </svg>
+            Sign Up
+        </button>
+        <p class="signup">Already have an account?
+		<a rel="noopener noreferrer" href="#" class="signuplink">Login</a>
+	</p>
+    </form>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signupLink = document.querySelector('.loginlink');
+            const loginForm = document.getElementById('form');
+            const signupForm = document.getElementById('signup');
+    
+            signupLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            });
+    
+            // Add an event listener for the "Login" link to switch back to the login form
+            const loginLink = document.querySelector('.signuplink');
+            loginLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

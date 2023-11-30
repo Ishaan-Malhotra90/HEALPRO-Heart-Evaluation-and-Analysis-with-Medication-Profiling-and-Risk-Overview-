@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='page4.css')}}">
+</head>
+<body>
+    <nav>
+        <ul>
+          
+           <li><a href="{{ url_for('mainpage') }}">Discover</a></li>
+           <li><a href="{{ url_for('about') }}">About</a></li>
+           <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+       
+         </ul>
+       
+         <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+     
+     </nav> 
+      <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+    <div class="container">
+        <h1>Analysis of Dataset used in medicine search engine</h1>
+        <div>
+            <div class="containerinside">
+                <h2>Therapeutic class distribution</h2>
+                <img src="static//images//therapeuticclass.png" alt="Original Photo">
+            </div>
+
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. Most number of medicines belong to Therapeutic Class-(Anti-infectives)<br>
+        2. Least number of medicines belong to Therapeutic Class-(STOMATO LOGICAL).</p>
+    </div>
+
+    <div class="container1">
+        <div>
+            <div class="containerinside">
+                <h2>Therapeutic Classes with maximum and minimum number of habit forming medicine</h2>
+                <img src="static//images//therapeutichf.png" alt="Original Photo">
+            </div>
+
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. Therapeutic class with mmaximum number of habit forming medicine is Neuro-cns(4054)<br>
+        2. Therapeutic class with minimum number of habit forming medicine is Cardiac(6).</p>
+    </div>
+
+    <div class="container2">
+        <div>
+            <div class="containerinside">
+                <h2>Analysis of side effects with different factors</h2>
+            </div>
+
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. Most common side effect among data:- Nausea<br><br>
+        2. Side effects related to different Therapeutic Classes.<br>
+            Cardiac:-Headache<br>
+            Gastro intestinal:-Diarrhea<br>
+            Blood Related:- Bleeding<br>
+            Pain Analgesics:- Nausea<br>
+            Anti Diabetic:- Hypoglycemia(low blood sugar level)<br><br>
+        3. There are 657 types of uses in our dataset some of the most common side effects according to these uses are:<br>
+            Abdominal cramp and pain:-Nausea<br>
+            Acidity:-Chalky taste<br>
+            Acne:-Erythem(skin redness)<br>
+            Acromelagy:-Diarrhea<br>
+            Treatement of vitamin D defficiency:-No common side effect<br>
+            Treate of Vitamin E defficinecy:-Headache</p>
+    </div>
+
+    <div class="container3">
+        <div>
+            <div class="containerinside">
+                <h2>Analysis of uses with different factors</h2>
+            </div>
+
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. Most common use among data:- Treatement of Bacterial Infections<br><br>
+        2. Some of the most common uses are.<br>
+            Treatement of bacterial infection(50861)<br>
+            Treatement of Pain relief(22783)<br>
+            Treatement of Type 2 diabetes mellitus(11350)<br>
+            Treatement of acid reflux(11288)<br><br>
+        3. Most common uses according to different Therapeutic classes:<br>
+        Cardiac:-Treatement of Hypertension(high blood pressure)<br>
+        Gastro intestinal:-Treatement of Gastroesophagal reflux diseases<br>
+        Blood Related:- Prevention of heart attack and stroke<br>
+        Pain Analgesics:- Pain relief<br>
+        Anti Diabetic:- Treatement of type 2 diabetes mellitus<br><br>
+        4.Most habit forming medicine is used for treatement of anxiety disorders.</p>
+    </div>
+</body>
+</html>

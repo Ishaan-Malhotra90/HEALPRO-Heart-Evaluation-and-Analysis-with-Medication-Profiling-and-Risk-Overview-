@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='page2.css')}}">
+</head>
+<body>
+    <nav>
+        <ul>
+          
+           <li><a href="{{ url_for('mainpage') }}">Discover</a></li>
+           <li><a href="{{ url_for('about') }}">About</a></li>
+           <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+       
+         </ul>
+       
+         <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+     
+     </nav> 
+      
+    <div class="container">
+        <h1>Comparison of Original Dataset VS Oversampled Dataset</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//countoriginal" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//countoversampled" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. In the original dataset the number of people having higher probability of getting a heart disease is significantly less to that of those with lower probabiliy.<br>
+        2. After oversampling the dataset now the number of people with higher and lower probability are equal.</p>
+    </div>
+
+    <div class="container1">
+        <h1>Feature Variable Gender vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//genderoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//genderoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. In the original dataset the data was imbalanced significantly as we can see for both male and female there is a major difference in number of people having low and high probability.<br>
+        2. After oversampling in the dataset now the number of people with higher and lower probability are almost equal.<br>
+        3. Females(0) are having a higher chance of getting heart disease in Comparison to males(0).</p>
+    </div>
+
+    <div class="container2">
+        <h1>Feature Variable Age vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//ageoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//ageoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. In the original dataset the number of high probability cases were significantly low to the lower probability cases.<br>
+        2. After oversampling in the dataset now the number of higher probability cases are more than that of lower probability cases.<br>
+        3. People having a higher probability of getting heart disease fall in the range 40 to 60.</p>
+    </div>
+    
+    <div class="container3">
+        <h1>Feature Variable CigsPerDay vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//cigsperdayoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//cigsperdayoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as we can see the number of higher probability cases is more for non smokers.<br>
+        2. After oversampling in the dataset now the number of higher probalility cases fall in the range of 0-10 cigs per day.<br>
+        3. People consuming 20-30 cigs per day are having the highest chance of getting a heart disease.</p>
+    </div>
+
+    <div class="container4">
+        <h1>Feature Variable BP Meds vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//bpmedsoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//bpmedsoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as we can see that the person who are not taking any bp medications have a higer chance of getting a heart disease than those who are taking bp medications.<br>
+        2. After oversampling in the dataset now the number of higher probalility cases are for those who are taking bp medications.<br>
+        3. 0.5-1(real values because we filled nan values with mean of the column) are having a higher chance of getting a heart disease.</p>
+    </div>
+
+    <div class="container5">
+        <h1>Feature Variable Prevalent Stroke vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//prevalentstrokeoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//prevalentstrokeoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as we can see that there are negligible cases of higher probability of heart disease who have a prevalent stroke.<br>
+        2. After oversampling in the dataset now the number of higher probalility and lower probability are equal in both prevalent stroke and non prevalent stroke.<br>
+        3. Those who have prevalent stroke are having higher probability of getting a heart disease.</p>
+    </div>
+
+    <div class="container6">
+        <h1>Feature Variable Prevalent Hyp vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//prevalenthyporiginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//prevalenthypoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset now the number of person having prevalent hyp are having a higher chance of getting a heart disease than those with lower probability.<br>
+    </div>
+
+    <div class="container7">
+        <h1>Feature Variable diabetes vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//diabetesoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//diabetesoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset now the number of people are approximately equal in both cases.<br>
+        3. People having diabetes are having a higher chance of getting heart disease than those who does not have diabetes.
+    </div>
+
+    <div class="container8">
+        <h1>Feature Variable Total Cholesterol vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//cholesteroloriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//cholesteroloversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset now we can see that high probability cases in each range has been increased accordingly.<br>
+        3. People having cholesteol in range 201-300 are having the highest chance of getting a heart disease.
+    </div>
+
+    <div class="container9">
+        <h1>Feature Variable Systolic Bp vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//sysbporiginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//sysbpoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset now we can see that higher and lower probability cases are approximately equal.<br>
+        3. People having systolic bp in range of 101-200 are having a higher chance of getting a heart disease (0-100 there are negligible cases of this range).
+    </div>
+
+    <div class="container10">
+        <h1>Feature Variable Diastolic Bp vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//diastolicbporiginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//diastolicbpoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset now we can see that higher and lower probability cases are approximately equal.<br>
+        3. People having diastolic bp in range of 101-200 are having a higher chance of getting a heart disease.
+    </div>
+
+    <div class="container11">
+        <h1>Feature Variable BMI vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//bmioriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//bmioversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset people having BMI in range 25-30 are having the highest chance of getting a heart disease.<br>
+    </div>
+
+    
+    <div class="container12">
+        <h1>Feature Variable Glucose vs Target Variable(TenYearCHD)</h1>
+        <div>
+            <div class="containerleft">
+                <h2>Original</h2>
+                <img src="static//images//glucoseoriginal.png" alt="Original Photo">
+            </div>
+
+            <div class="containerright">
+                <h2>Oversampled</h2>
+                <img src="static//images//glucoseoversampled.png" alt="Oversampled Photo">
+            </div>
+        </div>
+        <h3>OBSERVATIONS</h3>
+        <p>1. The original dataaset was highly imbalanced as there is a significant differnce between number of people having higher and lower probability of getting a heart disease.<br>
+        2. After oversampling in the dataset the number of higher and lower probability cases are almost equal for all ranges.<br>
+        3. Person having glucose levels in range 200-300 are having the highest chance of getting a heart disease.
+    </div>
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+
+</body>
+</html>

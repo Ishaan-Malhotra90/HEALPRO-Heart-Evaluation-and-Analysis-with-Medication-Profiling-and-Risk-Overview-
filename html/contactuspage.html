@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contactuspage.css')}}">
+</head>
+<body>
+    <nav>
+        <ul>
+           
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contactus') }}">Join Us</a></li>
+        
+          </ul>
+        
+          <img class="projectlogo" src="static//images//project logo.png" alt="projectlogo">
+      
+      </nav>
+    <section id="slide5" class="slide5">
+
+        <div id="slide5" class="slide-content5">
+           
+            <div class="contactinfo">
+                <h2 >Get in touch <br>with us </h2>
+                <p class="contactdetails">
+                    <b>Mail</b><br>
+                    healpro@gmail.com<br>
+                    <br>
+                    <b>Phone</b><br>
+                    +91 0011223344<br>
+                    <br>
+                    <b>Address</b><br>
+                    Chitkara University<br>Rajpura, Patiala<br>140401<br>
+                    <br>
+                    Follow Us on<br><br>
+                HEALPRO@All Rights Reserved
+            
+            </div>        
+
+            <form id="contactForm">
+            
+                <input type="text" placeholder="Your Name">
+            
+                <input type="email" placeholder="Your Email">
+            
+                <textarea placeholder="Description"></textarea>
+            
+                <a class="buttonsubmit" href="#">Submit</a>
+            
+            </form>
+            </div>
+            </section>
+</body>
+</html>
