@@ -1,1 +1,10 @@
 To use this project firstly install these libraries in the path told in "How to use".
+pip install flask
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install plotly
+pip install scikit-learn
+pip insatll imblearn
+pip install xgboost
+pip install joblib
